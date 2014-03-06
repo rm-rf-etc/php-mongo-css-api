@@ -9,7 +9,7 @@ Prototype / Demo of a mongo-based API for saving and updating dynamic documents 
 - GET requests will return JSON for a given document.
 - POST requests will add new records or do updates for given selectors which are included in the post data.
 
-### Design Philosophy ###
+### Design Principles Used ###
 
 - Thin controllers, using other objects under services (the service providers) to enact instructions.
 - Declarative routes in a single location.
