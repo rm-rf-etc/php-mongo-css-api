@@ -26,3 +26,9 @@ All tests have been done under the assumption that a certain ID is known. This I
 Yet to be implemented:  
 1. Additional logic could be added to translate the string of CSS into a JS object before writing to the DB.  
 2. Sub-routes could then be added to allow updating or fetching of values of individual properties for a given selector.  
+
+This is an example of some CSS data that you might save to your database using a POST request:  
+URL: http://localhost/css/1  
+".myclass": "border:1px solid black;"  
+"#myid": "font-family:courier"  
+".fancy > .selectors.as.well": "background:white"  
