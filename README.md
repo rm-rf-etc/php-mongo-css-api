@@ -29,8 +29,10 @@ Yet to be implemented:
 
 This is an example of some CSS data that you might save to your database using a POST request:  
 ```
-URL: http://localhost/css/1
-"#myid": "font-family:courier;"
-".myclass": "border:1px solid black; background:#ccc;"
-".fancy > .selectors.as.well": "border:1px solid #aaa; background:white;"
+                URL: http://localhost/css/1
+
+                  [ parameter : value ]
+                      "#myid" : "font-family:courier;"
+                   ".myclass" : "border:1px solid black; background:#ccc;"
+".fancy > .selectors.as.well" : "border:1px solid #aaa; background:white;"
 ```
