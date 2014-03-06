@@ -28,7 +28,9 @@ Yet to be implemented:
 2. Sub-routes could then be added to allow updating or fetching of values of individual properties for a given selector.  
 
 This is an example of some CSS data that you might save to your database using a POST request:  
-URL: http://localhost/css/1  
-".myclass": "border:1px solid black;"  
-"#myid": "font-family:courier"  
-".fancy > .selectors.as.well": "background:white"  
+```
+URL: http://localhost/css/1
+".myclass": "border:1px solid black;"
+"#myid": "font-family:courier"
+".fancy > .selectors.as.well": "background:white"
+```
