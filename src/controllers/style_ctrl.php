@@ -12,11 +12,11 @@ class StyleCtrl extends BaseController {
 
     $doc = new ModelAccessor([
       'collection' => $collection,
-      'id' => $id,
+      '_id' => $id,
     ]);
     
-    if ($doc) {
-      $this->end(200, $collection."\n".$id, 'text');
+    if (!empty($doc)) {
+      $this->end(200, json_encode($doc->data), 'text');
     } else {
       $this->end(500, 'error 500', 'text');
     }

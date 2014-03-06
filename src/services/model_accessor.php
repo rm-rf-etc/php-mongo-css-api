@@ -7,10 +7,11 @@
 class ModelAccessor {
 
   private $collection_name = null;
-  private $collection = null;
-  private $subject = null;
   private $mongo = null;
   private $db = null;
+  private $collection = null;
+
+  public $data = null;
 
   /**
    */
@@ -20,8 +21,6 @@ class ModelAccessor {
     $this->db = $this->mongo->{DB_NAME};
 
     $this->update($params);
-
-    return $this->subject;
   }
 
   /**
@@ -36,7 +35,7 @@ class ModelAccessor {
     
     if (isset($params['_id']) AND $this->collection_name) {
       $id = (integer)$params['_id'];
-      $this->subject = $this->db->{$this->collection_name}->findOne(['_id'=>$id]);
+      $this->data = $this->collection->findOne(['_id'=>$id]);
     }
     if (isset($params['_id']) AND isset($params['upsert'])) {
       $id = (integer)$params['_id'];
